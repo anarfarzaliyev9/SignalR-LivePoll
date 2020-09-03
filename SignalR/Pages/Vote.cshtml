@@ -1,0 +1,44 @@
+﻿@page
+@model SignalR.Pages.VoteModel
+@{
+    ViewData["Title"] = "Vote";
+}
+
+
+@*Vote progress bars*@
+<div class="vote-container">
+    <h4 class="text-center">How do you rate our services?</h4>
+    <ul>
+        <li>
+            <input type="radio" name="vote" >
+            <div class="vote-text d-inline">P407</div>
+            <div class="progress">
+                <div class="progress-bar"  role="progressbar"  data-groupname="P407" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+
+        </li>
+        <li>
+            <input type="radio" name="vote">
+            <div class="vote-text d-inline" >P408</div>
+            <div class="progress" >
+                <div class="progress-bar" role="progressbar" data-groupname="P408" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+
+        </li>
+        <li>
+            <input type="radio" name="vote">
+            <div class="vote-text d-inline" >P409</div>
+            <div class="progress" >
+                <div class="progress-bar" role="progressbar"data-groupname="P409" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">0%</div>
+            </div>
+
+        </li>
+    </ul>
+    <button id="voteButton">Vote</button>
+</div>
+
+@section scripts{
+    <script src="~/lib/@@aspnet/signalr/dist/browser/signalr.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/js/vote.js"></script>
+}
